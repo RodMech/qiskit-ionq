@@ -166,6 +166,9 @@ class IonQJob(JobV1):
     def cancel(self):
         """Cancel this job."""
         self._client.cancel_job(self._job_id)
+      
+    def queue_position(self, **kwargs):
+        return None
 
     def submit(self):
         """Submit a job to the IonQ API.
